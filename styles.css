@@ -1,0 +1,1473 @@
+:root {
+    /* Color Palette Mới: Tối hơn, Đậm chất Tech & Premium */
+    --bg-color: #030305;
+    --text-main: #f8f8fb;
+    --text-muted: #8b8b9f;
+    --accent-1: #00f0ff;
+    /* Cyan Neon */
+    --accent-2: #7000ff;
+    /* Purple Deep */
+    --glass-bg: rgba(25, 25, 35, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.05);
+
+    /* Variables cho Cursor & Glow Tracking */
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    /* Xóa cursor mặc định khi trên desktop để nhường chỗ cho custom cursor */
+    cursor: none !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+::selection {
+    background-color: var(--accent-2);
+    color: white;
+}
+
+/* ==========================================
+   1. PRELOADER (Màn Hình Tải Ấn Tượng)
+   ========================================== */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loader-content {
+    text-align: center;
+    width: 300px;
+}
+
+.loader-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.loader-text .dot {
+    color: var(--accent-1);
+    animation: pulseDot 1s infinite alternate;
+}
+
+@keyframes pulseDot {
+    0% {
+        opacity: 0.2;
+        text-shadow: 0 0 0px var(--accent-1);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 20px var(--accent-1);
+    }
+}
+
+.loader-bar-bg {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
+    box-shadow: 0 0 10px var(--accent-1);
+    transition: width 0.2s ease;
+}
+
+.loader-percentage {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+
+/* ==========================================
+   2. CUSTOM CURSOR (Con trỏ chuột tùy biến)
+   ========================================== */
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-1);
+    box-shadow: 0 0 10px var(--accent-1);
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+/* Khi Hover vào liên kết hoặc nút */
+.cursor-hover .cursor-outline {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 240, 255, 0.1);
+    border-color: var(--accent-1);
+    backdrop-filter: blur(2px);
+}
+
+.cursor-hover .cursor-dot {
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+/* Responsive: Ẩn Cursor gốc trên thiết bị cảm ứng */
+@media (pointer: coarse) {
+    * {
+        cursor: auto !important;
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+}
+
+/* ==========================================
+   3. ANIMATED BACKGROUND
+   ========================================== */
+.background-effects {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: var(--bg-color);
+}
+
+.grid-bg {
+    position: absolute;
+    inset: 0;
+    background-size: 50px 50px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.4;
+    animation: drift 25s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+    width: 600px;
+    height: 600px;
+    background: var(--accent-2);
+    top: -200px;
+    left: -100px;
+}
+
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--accent-1);
+    bottom: -150px;
+    right: -200px;
+    animation-delay: -7s;
+}
+
+.orb-3 {
+    width: 400px;
+    height: 400px;
+    background: #0044ff;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: -12s;
+    opacity: 0.2;
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    33% {
+        transform: translate(150px, 100px) scale(1.1) rotate(45deg);
+    }
+
+    66% {
+        transform: translate(-100px, 200px) scale(0.9) rotate(-30deg);
+    }
+
+    100% {
+        transform: translate(-50px, -150px) scale(1.2) rotate(15deg);
+    }
+}
+
+/* ==========================================
+   4. NAVBAR GLASSMORPHISM
+   ========================================== */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    height: 70px;
+    border-radius: 35px;
+    background: rgba(10, 10, 15, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+    gap: 50px;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar.scrolled {
+    top: 15px;
+    background: rgba(10, 10, 15, 0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+}
+
+.logo .dot {
+    color: var(--accent-1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-1);
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px var(--accent-1);
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* ==========================================
+   5. UTILITIES & TYPOGRAPHY
+   ========================================== */
+.section {
+    padding: 150px 5% 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--accent-1);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Nút Bấm Xịn Xò */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid transparent;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.btn-primary {
+    color: #000;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3);
+}
+
+.btn-primary::before {
+    background: var(--accent-1);
+}
+
+.btn-primary:hover::before {
+    transform: scaleX(1.5) scaleY(1.5);
+    background: white;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #000;
+    color: var(--accent-1);
+    border-radius: 50%;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary:hover .btn-icon {
+    transform: translateX(5px) rotate(-45deg);
+    background: var(--accent-1);
+    color: #000;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-main);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary::before {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(100%);
+}
+
+.btn-secondary:hover::before {
+    transform: translateY(0);
+}
+
+.btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-large {
+    padding: 20px 50px;
+    font-size: 1.2rem;
+}
+
+.btn-view-all {
+    color: white;
+    font-weight: 800;
+    border: 2px solid var(--accent-1);
+    background: transparent;
+    box-shadow: 0 5px 15px rgba(0, 240, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-view-all .btn-icon {
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.btn-view-all:hover {
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.5);
+    transform: translateY(-5px);
+}
+
+.btn-view-all:hover .btn-icon {
+    color: white;
+    transform: translateX(5px) scale(1.1);
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+/* ==========================================
+   6. HERO SECTION
+   ========================================== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 900px;
+    z-index: 2;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    color: var(--accent-1);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-name {
+    font-size: 6.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+.hero-role {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-bio {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    max-width: 600px;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Scroll Mouse Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    opacity: 0.6;
+}
+
+.scroll-indicator p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+}
+
+.mouse {
+    width: 26px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--accent-1);
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s infinite ease;
+}
+
+@keyframes scrollWheel {
+    0% {
+        top: 6px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 20px;
+        opacity: 0;
+    }
+}
+
+/* ==========================================
+   7. CHUẨN HIỆU ỨNG TEXT REVEAL
+   ========================================== */
+.reveal-text {
+    overflow: hidden;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    /* Thêm padding-top để không bị cắt xén dấu Tiếng Việt (như Ẽ, Ỗ) */
+    margin-top: -20px;
+    /* Bù trừ lại để không làm xô lệch giao diện */
+}
+
+.reveal-text h1,
+.reveal-text h2,
+.reveal-text h3 {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1s;
+}
+
+.reveal-text.is-visible h1,
+.reveal-text.is-visible h2,
+.reveal-text.is-visible h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.reveal-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.delay-4 {
+    transition-delay: 0.4s;
+}
+
+.delay-5 {
+    transition-delay: 0.5s;
+}
+
+
+/* Kỹ Năng Apps (Icon giống Adobe) */
+.app-skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.app-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: inherit;
+    /* Sử dụng chung Font hệ thống tránh lỗi */
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+    cursor: default;
+}
+
+.app-icon:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+}
+
+/* Kỹ Năng Văn Phòng */
+.office-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.office-tag {
+    background: #EEDD33;
+    color: #1A1C29;
+    padding: 12px 28px;
+    border-radius: 8px 30px 30px 8px;
+    /* Bo cong 1 bên giống ảnh */
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(238, 221, 51, 0.2);
+}
+
+.office-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   8. HORIZONTAL MARQUEE SLIDER (REELS/SHORTS)
+   ========================================== */
+.marquee-section {
+    padding: 100px 0 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 5%;
+}
+
+.marquee-header h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-icon-only {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.btn-icon-only:hover {
+    background: var(--accent-1);
+    color: black;
+    border-color: var(--accent-1);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.marquee-container {
+    width: 100vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 5%;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.marquee-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.marquee-track {
+    display: inline-flex;
+    gap: 30px;
+    padding: 0 15px;
+}
+
+/* Item Slider Dạng Ngang 1920x1080 */
+.marquee-item {
+    width: 480px;
+    aspect-ratio: 16/9;
+    /* Tỉ lệ màn hình rộng theo yêu cầu */
+    border-radius: 20px;
+    overflow: hidden;
+    background: #111;
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+    cursor: pointer;
+}
+
+.marquee-item:hover {
+    transform: scale(1.05) translateY(-10px);
+    border-color: var(--accent-1);
+    box-shadow: 0 20px 40px rgba(0, 240, 255, 0.2);
+    z-index: 10;
+}
+
+.marquee-item iframe,
+.marquee-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    /* Khóa iframe để bắt sự kiện click bên ngoài */
+    border: none;
+}
+
+.marquee-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 20px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.marquee-item:hover .marquee-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ==========================================
+   9. PORTFOLIO & PROJECTS
+   ========================================== */
+.pt-0 {
+    padding-top: 50px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-header h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    border-radius: 24px;
+    background: rgba(20, 20, 25, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+/* Hiệu ứng viền chạy vòng quanh card */
+.card-border-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    pointer-events: none;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(0, 240, 255, 0.15),
+            transparent 40%);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-card:hover .card-border-glow {
+    opacity: 1;
+}
+
+.media-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+    background: #000;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.media-container img,
+.media-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    transition: transform 0.8s ease;
+}
+
+.project-card:hover .media-container img {
+    transform: scale(1.08);
+}
+
+.project-info {
+    padding: 30px 10px 10px;
+}
+
+.project-type {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(112, 0, 255, 0.1);
+    border: 1px solid rgba(112, 0, 255, 0.3);
+    border-radius: 20px;
+    color: var(--accent-2);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.project-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.project-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   9. VỀ TÔI & CV CARDS (GLASS CARD 3D)
+   ========================================== */
+.about-container {
+    margin-bottom: 80px;
+}
+
+.about-container h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.about-desc {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin-bottom: 60px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.about-col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Glass Card Xịn Xò */
+.glass-card {
+    background: rgba(20, 20, 25, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    padding: 50px 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiệu ứng Glow di chuyển theo chuột trong Card */
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+            rgba(255, 255, 255, 0.06),
+            transparent 40%);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.glass-card:hover .card-glow {
+    opacity: 1;
+}
+
+.glass-card> :not(.card-glow) {
+    position: relative;
+    z-index: 2;
+}
+
+.subsection-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.title-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(112, 0, 255, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent-1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* TIMELINE Animated (Kéo tới đâu viền sáng tới đó) */
+.timeline {
+    position: relative;
+    padding-left: 45px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Đường dây Neon vẽ dần */
+.timeline.is-visible::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-1), var(--accent-2));
+    box-shadow: 0 0 10px var(--accent-1);
+    animation: drawLine 2s forwards ease;
+}
+
+@keyframes drawLine {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -42.5px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    border: 4px solid var(--accent-1);
+    z-index: 2;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.5);
+    background: var(--accent-1);
+    box-shadow: 0 0 20px var(--accent-1);
+}
+
+.timeline-time {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.timeline-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.timeline-subtitle {
+    font-size: 1.2rem;
+    color: var(--accent-1);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.timeline-details {
+    list-style: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.timeline-details li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.timeline-details li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-2);
+    font-weight: bold;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 24px;
+    border-radius: 40px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.skill-tag:hover {
+    background: var(--accent-2);
+    border-color: var(--accent-2);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(112, 0, 255, 0.3);
+}
+
+/* Participated */
+.participated-list {
+    list-style: none;
+}
+
+.participated-list li {
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid var(--accent-1);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    transition: all 0.3s;
+}
+
+.participated-list li:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+    color: white;
+    border-color: var(--accent-2);
+}
+
+/* ==========================================
+   10. CONTACT (Hợp Tác)
+   ========================================== */
+.contact-box {
+    text-align: center;
+    padding: 100px 50px;
+}
+
+.contact-box h2 {
+    font-size: 2rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.big-contact {
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.contact-box p {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto 0;
+    padding: 25px 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+}
+
+.contact-detail-item {
+    text-align: center;
+    min-width: 150px;
+}
+
+.contact-detail-item h4 {
+    font-size: 1.15rem;
+    color: var(--accent-1);
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-detail-item p {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon:hover {
+    background: var(--accent-1);
+    color: black;
+    transform: translateY(-10px) scale(1.1) rotate(10deg);
+    box-shadow: 0 15px 30px rgba(0, 240, 255, 0.3);
+}
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   11. RESPONSIVE
+   ========================================== */
+@media (max-width: 992px) {
+    .hero-name {
+        font-size: 5rem;
+    }
+
+    .hero-role {
+        font-size: 2.5rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 3rem;
+    }
+
+    .big-contact {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Navbar Mobile */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 15, 0.95);
+        border-radius: 20px;
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        width: 90%;
+        gap: 20px;
+    }
+
+    .section {
+        padding: 100px 5% 40px;
+    }
+
+    .hero-name {
+        font-size: 3.2rem;
+    }
+
+    .hero-role {
+        font-size: 1.6rem;
+    }
+
+    .hero-bio {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .marquee-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .marquee-item {
+        width: 85vw;
+        max-width: 350px;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .glass-card {
+        padding: 30px 20px;
+    }
+
+    .timeline::before,
+    .timeline.is-visible::after {
+        left: 9px;
+    }
+
+    .timeline-item::before {
+        left: -36px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .contact-box {
+        padding: 60px 20px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .big-contact {
+        font-size: 2.5rem;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .marquee-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-role {
+        font-size: 1.3rem;
+    }
+
+    .big-contact {
+        font-size: 2rem;
+    }
+
+    .contact-action .btn-large {
+        padding: 15px 30px;
+        font-size: 1rem;
+        width: 100%;
+    }
+}
