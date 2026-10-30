@@ -1,4 +1,4 @@
-# Video Editor Portfolio - Vũ Thế Anh
+# Video Editor Portfolio - Nguyễn Trung Quân
 
 Bản sao mã nguồn hoàn chỉnh và chính xác 100% của website [vutheanhprofile.netlify.app](https://vutheanhprofile.netlify.app).
 
