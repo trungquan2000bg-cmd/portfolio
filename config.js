@@ -43,31 +43,52 @@ const PORTFOLIO_CONFIG = {
     // 4. KINH NGHIỆM LÀM VIỆC
     experience: [
         {
-            time: "04/2021 - 04/2022",
-            company: "MIN PRODUCTION",
-            position: "Editor",
+            time: "07/2025 - Hiện nay",
+            company: "Cửa hàng Thế Giới Cầu Lông",
+            position: "Nhân viên Media",
             details: [
-                "Tham gia học hỏi các dự án thực tế."
+                "Biên tập và quản lý các trang social của công ty (FB, web, tiktok,...)",
+                "Làm video giới thiệu sản phẩm, cửa hàng, giải đấu",
+                "Hỗ trợ setup, điều hành các giải đấu"
             ]
         },
         {
-            time: "04/2022 - 09/2024",
-            company: "CÔNG TY CỔ PHẦN TRUYỀN THÔNG DTA",
-            position: "Editor",
+            time: "07/2023 - 06/2025",
+            company: "Công ty Cổ phần Thương mại và Xuất nhập khẩu Đức Tín",
+            position: "Nhân viên Media",
             details: [
-                "Học, phụ chụp, quay tại Công ty cổ phần truyền thông DTA.",
-                "Phụ setup ánh sáng, bối cảnh quay phim trường, sự kiện.",
-                "Tham gia sản xuất các phim TVC, MV, Viral,...",
-                "Viết kịch bản tik tok cho Bentoni, MB Capital,...",
-                "05/2023 - 09/2024: Trưởng nhóm phòng Editor."
+                "Hỗ trợ xây dựng content, hình ảnh cho các Brand",
+                "Tiếp nhận, phân loại và xử lý source quay thô",
+                "Phối hợp với design và content đưa ra video tối ưu nhất",
+                "Làm video theo yêu cầu của brand",
+                "Làm video Motion Graphics (TVC cho nhãn hàng, motion, chạy ads, truyền thông tiktok)"
             ]
         },
         {
-            time: "09/2024 - 02/2026",
-            company: "CTCP THƯƠNG MẠI VÀ XUẤT NHẬP KHẨU ĐỨC TÍN",
-            position: "Editor",
+            time: "11/2022 - 06/2023",
+            company: "Công ty TNHH Sản xuất và Xuất nhập khẩu AD MART",
+            position: "Nhân viên Marketing",
             details: [
-                "Vinh danh nhân viên xuất sắc năm 2024"
+                "Xây dựng content trên fanpage, tiktok, website",
+                "Chỉnh sửa hình ảnh, video trước khi đăng lên những nền tảng của công ty"
+            ]
+        },
+        {
+            time: "02/2022 - 06/2022",
+            company: "Xây dựng đồ án tốt nghiệp",
+            position: "Xây dựng website cứu hộ ô tô",
+            details: [
+                "Xây dựng chương trình bằng ngôn ngữ PHP và framework Laravel",
+                "Sử dụng MySQL server để chạy chương trình"
+            ]
+        },
+        {
+            time: "09/2021 - 01/2022",
+            company: "Công ty Cổ phần Công nghệ Phần mềm Quản trị Doanh nghiệp Cybersoft",
+            position: "Nhân viên triển khai dự án",
+            details: [
+                "Hỗ trợ triển khai dự án phần mềm đến công ty đối tác",
+                "Giới thiệu, tư vấn sản phẩm, giải đáp các vấn đề thắc mắc của khách hàng qua các mạng xã hội"
             ]
         }
     ],
