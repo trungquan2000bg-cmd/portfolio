@@ -95,14 +95,6 @@ const PORTFOLIO_CONFIG = {
     // 7. DANH SÁCH DỰ ÁN NỔI BẬT (HIỆN TRÊN TRANG CHỦ BẰNG GOOGLE DRIVE)
     projects: [
         {
-            title: "TVC",
-            category: "TVC",
-            type: "video",
-            driveLink: "https://drive.google.com/file/d/1sA1eszjkEikYfcT-H-aDgqvnr_gEO3iv/view?usp=drive_link",
-            thumbnailLink: "https://drive.google.com/file/d/1LgZomDJuV6a-bxmHGSiNe0w9_CH5I6x6/view?usp=drive_link",
-            description: "Dựng hình, Chỉnh màu và Thêm Hiệu ứng VFX."
-        },
-        {
             title: "Hologram",
             category: "Hologram",
             type: "video",
@@ -117,14 +109,6 @@ const PORTFOLIO_CONFIG = {
             driveLink: "https://drive.google.com/file/d/1JV_tYESf-68oM2eB3G4JG-oNtqxGlaQK/view?usp=drive_link",
             thumbnailLink: "https://drive.google.com/file/d/1WErIyL8MnIWXFE05SM2SVxHgKLotI4Xe/view?usp=drive_link", // Thêm dòng này để cài ảnh bìa riêng
             description: "Edit nhịp điệu nhanh, Sound Design cho các nền tảng dọc"
-        },
-        {
-            title: "3D",
-            category: "3D",
-            type: "video",
-            driveLink: "https://drive.google.com/file/d/16Kb7hzaWBXsB1zbGUDHqU4e8co65nVAq/view?usp=drive_link",
-            thumbnailLink: "https://drive.google.com/file/d/1ljuy1F7rjnJ4rvnSspYgkHiajUCFDahd/view?usp=drive_link",
-            description: "Edit cơ bản, kết hợp Motion Graphics"
         }
     ],
 
