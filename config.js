@@ -136,77 +136,44 @@ const PORTFOLIO_CONFIG = {
     // 8. DANH SÁCH VIDEO NGẮN / REELS (Trượt ngang trên trang chủ)
     shortVideos: [
         {
-            title: "Motion Graphics",
-            driveLink: "https://drive.google.com/file/d/1rov_B6WGaA0mRR9AxR-3cE-XyHC-DJ_-/view?usp=drive_link"
+            title: "JK Lab Việt",
+            driveLink: "https://drive.google.com/file/d/1SPqIzAr4a9ksJ1M0iVpHOe9x8w4WuS_O/view?usp=drive_link"
         },
         {
-            title: "Motion Graphics",
-            driveLink: "https://drive.google.com/file/d/19CIUiARFY5GJsHGLs6DCbQzJTmClIS7V/view?usp=drive_link"
+            title: "Bản Đồ Nhật",
+            driveLink: "https://drive.google.com/file/d/14sPPSneoAGGUR0SH3zWkFqc8GqHP8_kb/view?usp=drive_link"
         },
         {
-            title: "3D",
-            driveLink: "https://drive.google.com/file/d/16Kb7hzaWBXsB1zbGUDHqU4e8co65nVAq/view?usp=drive_link"
+            title: "Demo Day",
+            driveLink: "https://drive.google.com/file/d/1Sx-UPTw_tPxwEABqDvOysKwS0hyJHT4w/view?usp=drive_link"
         },
         {
-            title: "Game",
-            driveLink: "https://drive.google.com/file/d/1WefXkx05wTxdQArJc5zQ_pKzgCoOiJhw/view?usp=drive_link"
+            title: "JKLAB",
+            driveLink: "https://drive.google.com/file/d/1C8L3gDXG2Xd2Ymvwc0c_xy-f5Gnk32V6/view?usp=drive_link"
         },
         {
-            title: "Hologram",
-            driveLink: "https://drive.google.com/file/d/18x3Yg9zm7i4uHa82K7WdUAsqWkHlrF57/view?usp=drive_link"
+            title: "KB2 BSC",
+            driveLink: "https://drive.google.com/file/d/1fW2J6ZRkCPrr5GPhdDxODzVZF5iyLUOm/view?usp=drive_link"
         },
         {
-            title: "Showreel",
-            driveLink: "https://drive.google.com/file/d/1spwIzbZcZnwqy0pGw5VAOb_An5Xa97zD/view?usp=drive_link"
+            title: "KICK OFF BSC 2024",
+            driveLink: "https://drive.google.com/file/d/1PHh4QIvV1XXRvXYgcUVNopuRkPCDx7Vp/view?usp=drive_link"
         },
         {
-            title: "",
-            driveLink: "https://drive.google.com/file/d/1ZyptuPYuAE37bDzrvfH1qm8JtBH2DdmU/view?usp=drive_link"
+            title: "Lacoste AGLT 23",
+            driveLink: "https://drive.google.com/file/d/1A0fj1ihag9Llz5ogwB0lX73jkWQaovvs/view?usp=drive_link"
         },
         {
-            title: "",
-            driveLink: "https://drive.google.com/file/d/1hGLQs5rgWB9tbC5Y_dxz2JHKbOKEM8QU/view?usp=drive_link"
+            title: "LaosApp",
+            driveLink: "https://drive.google.com/file/d/1V1YpW7_snQ0_UVjqny_Jd6CbZ7yQvKe-/view?usp=drive_link"
         },
         {
-            title: "",
-            driveLink: "https://drive.google.com/file/d/1sSlR-FQiCjvqCQOJU9VQ6bzYvDqQgo0U/view?usp=drive_link"
+            title: "Motion KB6",
+            driveLink: "https://drive.google.com/file/d/113Y1h1q5ftL9Fwxh3wZaUWJZWEZVvN48/view?usp=drive_link"
         },
         {
-            title: "AI",
-            driveLink: "https://drive.google.com/file/d/1ITzYLx7aHpS0c4wg-DVSyAN-s-Hm1jHA/view?usp=drive_link"
-        },
-        {
-            title: "Motion",
-            driveLink: "https://drive.google.com/file/d/1a6R31UDFXOPHzRjOEz4KYfyb2XxmadrZ/view?usp=drive_link"
-        },
-        {
-            title: "",
-            driveLink: "https://drive.google.com/file/d/1YbEeSpYKc11xR3eDzqddHhbNZzwxGbpl/view?usp=drive_link"
-        },
-        {
-            title: "",
-            driveLink: "https://drive.google.com/file/d/1af7HtBgMnKEiVomREaHys4cL74TGu0Ew/view?usp=drive_link"
-        },
-        {
-            title: "",
-            driveLink: "https://drive.google.com/file/d/10RXoocouES7uKI4jvMvkFR0tF-9_fWxL/view?usp=drive_link"
-        },
-        {
-            title: "Spa",
-            driveLink: "https://drive.google.com/file/d/1NbB2abhhroiSlwax1PMrKA0SKyRpI6zP/view?usp=drive_link"
-        },
-        {
-            title: "",
-            driveLink: "https://drive.google.com/file/d/1p7XVrHUREwtqVwJa2TSl2VFXUy9NLutS/view?usp=drive_link"
-        },
-        {
-            title: "",
-            driveLink: "https://drive.google.com/file/d/1EDYkqRScc6XdAEFN8KJWJjbofsIpasmJ/view?usp=drive_link"
-        },
-        {
-            title: "",
-            driveLink: "https://drive.google.com/file/d/1BXUyc3I-5tB_D0Zht25Z01Xj677joddZ/view?usp=drive_link"
-        },
-
+            title: "Nhà Máy",
+            driveLink: "https://drive.google.com/file/d/1fduC0xquIGl64wPQIoWS9dyZk1O_kBux/view?usp=drive_link"
+        }
     ]
 };
