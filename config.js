@@ -13,7 +13,7 @@ const PORTFOLIO_CONFIG = {
         role: "Video Editor & VFX Artist",
         bio: "Xin chào! Tôi là một Video Editor chuyên nghiệp với đam mê biến những thước phim thô thành các tác phẩm hoàn chỉnh, mang đến trải nghiệm thị giác ấn tượng nhất.",
         about: "Dưới đây là chi tiết về quá trình học tập, kinh nghiệm làm việc và những dự án tôi đã tham gia.",
-        email: "vutheanh120100@gmail.com", // Khi khách bấm gửi email sẽ tự động mở app gửi mail
+        email: "trungquan.contactt@gmail.com", // Khi khách bấm gửi email sẽ tự động mở app gửi mail
     },
 
     // 2. KỸ NĂNG CỦA BẠN (Từng mục cách nhau bằng dấu phẩy)
@@ -81,13 +81,13 @@ const PORTFOLIO_CONFIG = {
 
     // 6. THÔNG TIN LIÊN HỆ & MẠNG XÃ HỘI
     contactInfo: {
-        address: "110 Trần Duy Hưng, Hà Nội",
-        dob: "12/01/2000",
+        address: "Phú Đô, Từ Liêm, Hà Nội",
+        dob: "14/10/2000",
         gender: "Nam"
     },
     socials: [
-        { icon: "bx bx-phone", url: "tel:0392166954", text: "0392 166 954" },
-        { icon: "bx bxl-facebook", url: "https://www.facebook.com/mrbro33/", text: "Facebook" },
+        { icon: "bx bx-phone", url: "tel:0854006616", text: "0854 006 616" },
+        { icon: "bx bxl-facebook", url: "https://www.facebook.com/ntquan14", text: "Facebook" },
     ],
 
     // 7. DANH SÁCH DỰ ÁN NỔI BẬT (HIỆN TRÊN TRANG CHỦ BẰNG GOOGLE DRIVE)
