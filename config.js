@@ -19,11 +19,9 @@ const PORTFOLIO_CONFIG = {
     // 2. KỸ NĂNG CỦA BẠN (Từng mục cách nhau bằng dấu phẩy)
     skills: [
         "Photoshop",
-        "Illustrator",
         "After Effects",
-        "InDesign",
         "Premiere Pro",
-        "Lightroom",
+        "CapCut",
     ],
 
     // 3. HỌC VẤN
