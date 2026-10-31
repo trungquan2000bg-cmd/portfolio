@@ -50,6 +50,11 @@ function buildUI() {
     const emailBtn = document.getElementById('email-btn');
     if (emailBtn) emailBtn.href = `mailto:${PORTFOLIO_CONFIG.profile.email}`;
 
+    const viewAllBtn = document.getElementById('view-all-btn');
+    if (viewAllBtn && PORTFOLIO_CONFIG.viewAllFolderLink) {
+        viewAllBtn.href = PORTFOLIO_CONFIG.viewAllFolderLink;
+    }
+
     // Render Timeline: Học vấn
     const eduTimeline = document.getElementById('education-timeline');
     if (eduTimeline && PORTFOLIO_CONFIG.education) {

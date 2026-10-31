@@ -111,6 +111,8 @@ const PORTFOLIO_CONFIG = {
             description: "Edit nhịp điệu nhanh, Sound Design cho các nền tảng dọc"
         }
     ],
+    // Link mở thư mục Google Drive khi bấm nút "Xem Đầy Đủ Sản Phẩm"
+    viewAllFolderLink: "https://drive.google.com/drive/u/1/folders/12XfWVykjVRorH9741HuagBV-eP6bTGqR",
 
     // 8. DANH SÁCH VIDEO NGẮN / REELS (Trượt ngang trên trang chủ)
     shortVideos: [
