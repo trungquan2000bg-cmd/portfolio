@@ -19,7 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     /* Xóa cursor mặc định khi trên desktop để nhường chỗ cho custom cursor */
     cursor: none !important;
     scroll-behavior: smooth;
