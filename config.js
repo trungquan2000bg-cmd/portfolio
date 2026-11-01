@@ -10,7 +10,7 @@ const PORTFOLIO_CONFIG = {
     // 1. CHỈNH SỬA THÔNG TIN CÁ NHÂN
     profile: {
         name: "Nguyễn Trung Quân",
-        role: "Video Editor & VFX Artist",
+        role: "Video Editor",
         bio: "Xin chào! Tôi là một Video Editor chuyên nghiệp với đam mê biến những thước phim thô thành các tác phẩm hoàn chỉnh, mang đến trải nghiệm thị giác ấn tượng nhất.",
         about: "Dưới đây là chi tiết về quá trình học tập, kinh nghiệm làm việc và những dự án tôi đã tham gia.",
         email: "trungquan.contactt@gmail.com", // Khi khách bấm gửi email sẽ tự động mở app gửi mail
