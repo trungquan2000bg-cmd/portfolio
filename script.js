@@ -182,8 +182,17 @@ function buildUI() {
 
             let mediaHtml = '';
 
-            // Nếu người dùng cung cấp CÓ SẴN 1 Link Ảnh làm Thumbnail (thumbnailLink)
-            if (project.type === 'video' && project.thumbnailLink) {
+            // Nếu link là thư mục Google Drive (không thể embed iframe trực tiếp)
+            if (project.driveLink && project.driveLink.includes('/folders/')) {
+                mediaHtml = `
+                   <div class="video-thumbnail-container" onclick="window.open('${project.driveLink}', '_blank')" style="cursor: pointer; position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(112, 0, 255, 0.25) 0%, rgba(0, 240, 255, 0.12) 100%); border-radius: 12px; gap: 10px;">
+                       <div class="play-overlay" style="position: static; transform: none; background: rgba(0,240,255,0.15); border: 1px solid var(--accent-1); border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;">
+                           <i class='bx bx-folder-open' style="font-size: 36px; color: var(--accent-1);"></i>
+                       </div>
+                       <span style="color: #f8f8fb; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px;">Mở Thư Mục Google Drive</span>
+                   </div>
+                `;
+            } else if (project.type === 'video' && project.thumbnailLink) {
                 const thumbUrl = parseDriveLink(project.thumbnailLink, 'image');
                 mediaHtml = `
                    <div class="video-thumbnail-container" onclick="this.outerHTML='<iframe src=\\'${embedUrl}\\' allow=\\'autoplay; fullscreen\\' loading=\\'lazy\\' style=\\'width:100%; height:100%; border:none;\\'></iframe>'" style="cursor: pointer; position: relative; width: 100%; height: 100%;">

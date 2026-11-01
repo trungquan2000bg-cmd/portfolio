@@ -117,16 +117,16 @@ const PORTFOLIO_CONFIG = {
             title: "Hologram",
             category: "Hologram",
             type: "video",
-            driveLink: "https://drive.google.com/file/d/1B0d82PCE72FXSbE8fvEYJi07OC_HYIEZ/view?usp=drive_link",
-            thumbnailLink: "https://drive.google.com/file/d/1BUOu-UG1p3XuKhfB07RRG8c-iNidytv0/view?usp=drive_link",
-            description: "VFX"
+            driveLink: "https://drive.google.com/drive/u/1/folders/12XfWVykjVRorH9741HuagBV-eP6bTGqR",
+            thumbnailLink: "",
+            description: "VFX & 3D Project"
         },
         {
             title: "Highlight",
             category: "Highlight",
-            type: "video", // Đổi type thành video để phát bình thường
-            driveLink: "https://drive.google.com/file/d/1JV_tYESf-68oM2eB3G4JG-oNtqxGlaQK/view?usp=drive_link",
-            thumbnailLink: "https://drive.google.com/file/d/1WErIyL8MnIWXFE05SM2SVxHgKLotI4Xe/view?usp=drive_link", // Thêm dòng này để cài ảnh bìa riêng
+            type: "video",
+            driveLink: "https://drive.google.com/file/d/1PDZC8Ip2Hycq-jBDAyNAlT9ooCX-wRLR/view?usp=drive_link",
+            thumbnailLink: "https://drive.google.com/file/d/1PDZC8Ip2Hycq-jBDAyNAlT9ooCX-wRLR/view?usp=drive_link",
             description: "Edit nhịp điệu nhanh, Sound Design cho các nền tảng dọc"
         }
     ],
