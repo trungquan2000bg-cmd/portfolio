@@ -127,14 +127,6 @@ function buildUI() {
         });
     }
 
-    // Render Dự án tham gia
-    const partProj = document.getElementById('participated-projects');
-    if (partProj && PORTFOLIO_CONFIG.participatedProjects) {
-        PORTFOLIO_CONFIG.participatedProjects.forEach(item => {
-            partProj.innerHTML += `<li>${item}</li>`;
-        });
-    }
-
     // Render MXH & Liên Hệ
     const socialsContainer = document.getElementById('social-links');
     if (socialsContainer && PORTFOLIO_CONFIG.socials) {

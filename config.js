@@ -12,7 +12,7 @@ const PORTFOLIO_CONFIG = {
         name: "Nguyễn Trung Quân",
         role: "Video Editor",
         bio: "Xin chào! Tôi là một Video Editor chuyên nghiệp với đam mê biến những thước phim thô thành các tác phẩm hoàn chỉnh, mang đến trải nghiệm thị giác ấn tượng nhất.",
-        about: "Dưới đây là chi tiết về quá trình học tập, kinh nghiệm làm việc và những dự án tôi đã tham gia.",
+        about: "Dưới đây là chi tiết về quá trình học tập, kỹ năng và kinh nghiệm làm việc của tôi.",
         email: "trungquan.contactt@gmail.com", // Khi khách bấm gửi email sẽ tự động mở app gửi mail
     },
 
@@ -27,15 +27,9 @@ const PORTFOLIO_CONFIG = {
     // 3. HỌC VẤN
     education: [
         {
-            time: "2018 - 2020",
-            school: "TRƯỜNG CAO ĐẲNG CÔNG NGHỆ BÁCH KHOA HÀ NỘI",
+            time: "2018 - 2022",
+            school: "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ GIAO THÔNG VẬN TẢI",
             major: "Công nghệ thông tin",
-            grade: "Khá"
-        },
-        {
-            time: "2021 - 2023",
-            school: "TRƯỜNG CAO ĐẲNG FPT POLETECHNIC",
-            major: "Thiết kế đồ họa",
             grade: "Khá"
         }
     ],
@@ -91,13 +85,6 @@ const PORTFOLIO_CONFIG = {
                 "Giới thiệu, tư vấn sản phẩm, giải đáp các vấn đề thắc mắc của khách hàng qua các mạng xã hội"
             ]
         }
-    ],
-
-    // 5. CÁC DỰ ÁN ĐÃ THAM GIA (Vai trò)
-    participatedProjects: [
-        "Lên kịch bản ra mắt quỹ Rodium cho MB Capital",
-        "Lên kịch bản, sản xuất phim tết cho Panasonic.",
-        "Sản xuất TVC VNPT SmartCloud, Phim doanh nghiệp."
     ],
 
     // 6. THÔNG TIN LIÊN HỆ & MẠNG XÃ HỘI
