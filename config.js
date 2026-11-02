@@ -151,8 +151,8 @@ const PORTFOLIO_CONFIG = {
             driveLink: "https://drive.google.com/file/d/1A0fj1ihag9Llz5ogwB0lX73jkWQaovvs/view?usp=drive_link"
         },
         {
-            title: "Zetra",
-            driveLink: "https://drive.google.com/file/d/1TKNB35BYaHF0FgrC9aJozZbXeGHeagD2/view?usp=drive_link"
+            title: "VFX & Motion",
+            driveLink: "https://drive.google.com/file/d/1iYmPA--NOWj1xOv_7_NFV2ggMKCeDMFd/view"
         },
         {
             title: "Motion KB6",
