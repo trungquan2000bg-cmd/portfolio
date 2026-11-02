@@ -76,7 +76,7 @@ const PORTFOLIO_CONFIG = {
             ]
         },
         {
-            time: "07/2025 - Hiện nay",
+            time: "02/2026 - Hiện nay",
             company: "Cửa hàng Thế Giới Cầu Lông",
             position: "Nhân viên Media",
             details: [
@@ -104,8 +104,8 @@ const PORTFOLIO_CONFIG = {
             title: "Hologram",
             category: "Hologram",
             type: "video",
-            driveLink: "https://drive.google.com/file/d/1iYmPA--NOWj1xOv_7_NFV2ggMKCeDMFd/view?usp=drive_link",
-            thumbnailLink: "https://drive.google.com/file/d/1iYmPA--NOWj1xOv_7_NFV2ggMKCeDMFd/view?usp=drive_link",
+            driveLink: "https://drive.google.com/file/d/1V1YpW7_snQ0_UVjqny_Jd6CbZ7yQvKe-/view",
+            thumbnailLink: "https://drive.google.com/file/d/1V1YpW7_snQ0_UVjqny_Jd6CbZ7yQvKe-/view",
             description: "VFX & 3D Project"
         },
         {
@@ -151,8 +151,8 @@ const PORTFOLIO_CONFIG = {
             driveLink: "https://drive.google.com/file/d/1A0fj1ihag9Llz5ogwB0lX73jkWQaovvs/view?usp=drive_link"
         },
         {
-            title: "LaosApp",
-            driveLink: "https://drive.google.com/file/d/1V1YpW7_snQ0_UVjqny_Jd6CbZ7yQvKe-/view?usp=drive_link"
+            title: "Zetra",
+            driveLink: "https://drive.google.com/file/d/1TKNB35BYaHF0FgrC9aJozZbXeGHeagD2/view?usp=drive_link"
         },
         {
             title: "Motion KB6",
