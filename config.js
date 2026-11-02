@@ -37,13 +37,30 @@ const PORTFOLIO_CONFIG = {
     // 4. KINH NGHIỆM LÀM VIỆC
     experience: [
         {
-            time: "07/2025 - Hiện nay",
-            company: "Cửa hàng Thế Giới Cầu Lông",
-            position: "Nhân viên Media",
+            time: "09/2021 - 01/2022",
+            company: "Công ty Cổ phần Công nghệ Phần mềm Quản trị Doanh nghiệp Cybersoft",
+            position: "Nhân viên triển khai dự án",
             details: [
-                "Biên tập và quản lý các trang social của công ty (FB, web, tiktok,...)",
-                "Làm video giới thiệu sản phẩm, cửa hàng, giải đấu",
-                "Hỗ trợ setup, điều hành các giải đấu"
+                "Hỗ trợ triển khai dự án phần mềm đến công ty đối tác",
+                "Giới thiệu, tư vấn sản phẩm, giải đáp các vấn đề thắc mắc của khách hàng qua các mạng xã hội"
+            ]
+        },
+        {
+            time: "02/2022 - 06/2022",
+            company: "Xây dựng đồ án tốt nghiệp",
+            position: "Xây dựng website cứu hộ ô tô",
+            details: [
+                "Xây dựng chương trình bằng ngôn ngữ PHP và framework Laravel",
+                "Sử dụng MySQL server để chạy chương trình"
+            ]
+        },
+        {
+            time: "11/2022 - 06/2023",
+            company: "Công ty TNHH Sản xuất và Xuất nhập khẩu AD MART",
+            position: "Nhân viên Marketing",
+            details: [
+                "Xây dựng content trên fanpage, tiktok, website",
+                "Chỉnh sửa hình ảnh, video trước khi đăng lên những nền tảng của công ty"
             ]
         },
         {
@@ -59,30 +76,13 @@ const PORTFOLIO_CONFIG = {
             ]
         },
         {
-            time: "11/2022 - 06/2023",
-            company: "Công ty TNHH Sản xuất và Xuất nhập khẩu AD MART",
-            position: "Nhân viên Marketing",
+            time: "07/2025 - Hiện nay",
+            company: "Cửa hàng Thế Giới Cầu Lông",
+            position: "Nhân viên Media",
             details: [
-                "Xây dựng content trên fanpage, tiktok, website",
-                "Chỉnh sửa hình ảnh, video trước khi đăng lên những nền tảng của công ty"
-            ]
-        },
-        {
-            time: "02/2022 - 06/2022",
-            company: "Xây dựng đồ án tốt nghiệp",
-            position: "Xây dựng website cứu hộ ô tô",
-            details: [
-                "Xây dựng chương trình bằng ngôn ngữ PHP và framework Laravel",
-                "Sử dụng MySQL server để chạy chương trình"
-            ]
-        },
-        {
-            time: "09/2021 - 01/2022",
-            company: "Công ty Cổ phần Công nghệ Phần mềm Quản trị Doanh nghiệp Cybersoft",
-            position: "Nhân viên triển khai dự án",
-            details: [
-                "Hỗ trợ triển khai dự án phần mềm đến công ty đối tác",
-                "Giới thiệu, tư vấn sản phẩm, giải đáp các vấn đề thắc mắc của khách hàng qua các mạng xã hội"
+                "Biên tập và quản lý các trang social của công ty (FB, web, tiktok,...)",
+                "Làm video giới thiệu sản phẩm, cửa hàng, giải đấu",
+                "Hỗ trợ setup, điều hành các giải đấu"
             ]
         }
     ],
