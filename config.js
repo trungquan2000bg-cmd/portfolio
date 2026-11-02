@@ -104,8 +104,8 @@ const PORTFOLIO_CONFIG = {
             title: "Hologram",
             category: "Hologram",
             type: "video",
-            driveLink: "https://drive.google.com/drive/u/1/folders/12XfWVykjVRorH9741HuagBV-eP6bTGqR",
-            thumbnailLink: "",
+            driveLink: "https://drive.google.com/file/d/1iYmPA--NOWj1xOv_7_NFV2ggMKCeDMFd/view?usp=drive_link",
+            thumbnailLink: "https://drive.google.com/file/d/1iYmPA--NOWj1xOv_7_NFV2ggMKCeDMFd/view?usp=drive_link",
             description: "VFX & 3D Project"
         },
         {
