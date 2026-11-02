@@ -350,6 +350,10 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
+    padding-top: 0.25em;
+    padding-bottom: 0.1em;
+    margin-top: -0.25em;
+    margin-bottom: -0.1em;
 }
 
 /* Nút Bấm Xịn Xò */
@@ -497,7 +501,7 @@ body {
 .hero-name {
     font-size: clamp(2.4rem, 5.2vw, 4.8rem);
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 15px;
     letter-spacing: -1.5px;
     text-transform: uppercase;
@@ -713,7 +717,7 @@ body {
 .marquee-header h2 {
     font-size: 3.5rem;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.25;
     text-transform: uppercase;
     margin-top: 15px;
 }
@@ -841,7 +845,7 @@ body {
 .section-header h2 {
     font-size: 4rem;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.25;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
@@ -1225,7 +1229,7 @@ body {
     font-size: 5rem;
     font-weight: 900;
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 1.2;
     margin-bottom: 30px;
 }
 
